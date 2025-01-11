@@ -116,8 +116,8 @@ class SimpleYoutubeSkill(OVOSCommonPlaybackSkill):
                     skill_icon=self.skill_icon
                 )
                 for vidx, v in enumerate(ch.videos):
-                    if "patreon" in v.title.lower():  # TODO blacklist.voc
-                        continue
+                    #if "patreon" in v.title.lower():  # TODO blacklist.voc
+                    #    continue
                     pl.append(MediaEntry(
                         uri=v.watch_url,
                         match_confidence=self.calc_score(phrase, v, idx=vidx),
